@@ -5,7 +5,8 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from PIL import Image, ImageEnhance, ImageFilter, ImageOps, ImageDraw
+import numpy as np
+from PIL import Image, ImageFilter, ImageOps, ImageDraw
 
 
 def create_demo_image(path: Path) -> None:
@@ -25,14 +26,16 @@ def apply_filter(image: Image.Image, mode: str) -> Image.Image:
     if mode == "blur":
         return image.filter(ImageFilter.GaussianBlur(radius=4))
     if mode == "brighten":
-        return ImageEnhance.Brightness(image).enhance(1.35)
+        pixels = np.asarray(image, dtype=np.float32)
+        pixels = np.clip(pixels * 1.35, 0, 255).astype(np.uint8)
+        return Image.fromarray(pixels)
     raise ValueError(f"不支持的处理模式：{mode}")
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="对图片进行简单处理")
-    parser.add_argument("--input", default="images/demo_input.png", help="输入图片路径")
-    parser.add_argument("--output", default="images/demo_output.png", help="输出图片路径")
+    parser.add_argument("--input", default="images/input.jpg", help="输入图片路径")
+    parser.add_argument("--output", default="images/output.jpg", help="输出图片路径")
     parser.add_argument(
         "--mode",
         choices=("gray", "blur", "brighten"),
