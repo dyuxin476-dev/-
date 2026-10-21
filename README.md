@@ -136,10 +136,28 @@ images/output.jpg
 
 ### 6. 尝试其他处理模式
 
+#### 6.1 黑白效果
+
+将图片转换为黑白色调，便于观察图片颜色变化。
+
 ```bash
-python main.py --mode gray       # 黑白效果
-python main.py --mode blur       # 模糊效果
-python main.py --mode brighten   # 变亮效果
+python main.py --mode gray
+```
+
+#### 6.2 模糊效果
+
+对图片进行模糊处理，使图片细节变得不清晰。
+
+```bash
+python main.py --mode blur
+```
+
+#### 6.3 变亮效果
+
+提高图片整体亮度。这个模式使用 NumPy 对图片像素进行运算。
+
+```bash
+python main.py --mode brighten
 ```
 
 ### 7. 生成图片对比图（拓展）
