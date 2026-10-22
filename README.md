@@ -57,7 +57,8 @@
 
 请按照“项目部署方法”完成程序运行，并在此处插入运行结果截图。
 
-![程序运行结果](images/output.jpg)
+<img width="1202" height="634" alt="e80cc40274f4da2a2766c44d9ac04d8e" src="https://github.com/user-attachments/assets/ab5846e9-c205-4e64-8e43-c976aec5672e" />
+
 
 ## 图片处理实践题
 
