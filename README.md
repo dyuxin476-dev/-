@@ -101,16 +101,24 @@
 
 ### 1. 下载项目
 
-使用 Git 命令：
+使用 Git 命令前，先在终端中检查 Git 是否可用：
 
 ```bash
-git clone https://github.com/dyuxin476-dev/-.git 新生计算机入门实践
+git --version
+```
+
+如果终端显示 Git 的版本号，就可以继续。Cloud Studio 通常已经自带 Git，不需要学生另外安装。
+
+然后执行：
+
+```bash
+git clone https://github.com/dyuxin476-dev/BDAS-First_Supplementary_Round_2026.git
 ```
 
 ### 2. 进入项目文件夹
 
 ```bash
-cd 新生计算机入门实践
+cd BDAS-First_Supplementary_Round_2026
 ```
 
 如果已经在项目文件夹中打开终端，可以跳过这一步。
@@ -123,7 +131,7 @@ pip install -r requirements.txt
 
 ### 4. 准备输入图片
 
-将提供的图片放入项目中的 `images` 文件夹，并命名为：
+项目中已经提供了示例图片，不需要重新上传。请确认 `images` 文件夹中已经有：
 
 
 images/input.jpg
@@ -184,7 +192,7 @@ images/comparison.png
 ## 项目结构
 
 ```text
-新生计算机入门实践/
+BDAS-First_Supplementary_Round_2026/
 ├── README.md
 ├── main.py
 ├── compare.py
