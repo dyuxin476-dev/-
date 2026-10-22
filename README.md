@@ -90,6 +90,57 @@
 
 ## 项目部署方法
 
+### 0. 没有安装 Python 环境怎么办？——使用 Cloud Studio（推荐）
+
+如果自己的电脑还没有安装 Python，可以直接使用浏览器中的 Cloud Studio 在线环境，不需要在电脑上安装 Python。
+
+1. 打开 [Cloud Studio](https://cloudstudio.net/t)，登录或注册账号。
+2. 选择一个 Python 开发环境打开工作空间。
+3. 进入工作空间后，找到下方或侧边的 **终端（Terminal）**，新建一个终端。
+4. 将下面的命令逐行复制到终端中执行。每输入一行后按回车，等待上一条命令执行完成，再输入下一行：
+
+```bash
+git clone https://github.com/dyuxin476-dev/-.git 新生计算机入门实践
+cd 新生计算机入门实践
+pip install -r requirements.txt
+```
+
+5. 项目中已经提供了示例图片，不需要重新上传。请在左侧文件区打开 `新生计算机入门实践/images` 文件夹，确认其中有 `input.jpg`。如果想处理自己的图片，再用自己的图片替换它，并保持文件名和路径不变：
+
+```text
+新生计算机入门实践/images/input.jpg
+```
+
+6. 回到终端，确认当前位于 `新生计算机入门实践` 文件夹中，然后运行：
+
+```bash
+python main.py
+```
+
+7. 程序运行成功后，在左侧 `images` 文件夹中找到 `output.jpg`，打开它查看结果，并截取程序运行结果作为答题材料。
+
+8. 想尝试其他模式时，每次只复制并运行下面的一条命令，运行完成后再尝试下一种模式。
+
+黑白效果：
+
+```bash
+python main.py --mode gray
+```
+
+模糊效果：
+
+```bash
+python main.py --mode blur
+```
+
+变亮效果：
+
+```bash
+python main.py --mode brighten
+```
+
+> 注意：终端中的命令要在上一条命令执行完成后再输入；不要把命令提示符（例如 `$`）一起复制进去。Cloud Studio 中的文件和运行环境是在线的，完成截图后仍应保存好答题文档和运行结果。
+
 ### 1. 下载项目
 
 在 GitHub 项目页面点击绿色的 **Code** 按钮，选择 **Download ZIP**，下载后解压。
