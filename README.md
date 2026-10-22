@@ -57,7 +57,8 @@
 
 请按照“项目部署方法”完成程序运行，并在此处插入运行结果截图。
 
-![程序运行结果](images/output.jpg)
+<img width="1202" height="634" alt="e80cc40274f4da2a2766c44d9ac04d8e" src="https://github.com/user-attachments/assets/ab5846e9-c205-4e64-8e43-c976aec5672e" />
+
 
 ## 图片处理实践题
 
@@ -169,9 +170,9 @@ pip install -r requirements.txt
 
 将提供的图片放入项目中的 `images` 文件夹，并命名为：
 
-```text
+
 images/input.jpg
-```
+
 
 ### 5. 运行基础图片处理程序
 
@@ -181,9 +182,9 @@ python main.py
 
 程序会读取 `images/input.jpg`，默认进行黑白处理，并生成：
 
-```text
+
 images/output.jpg
-```
+
 
 ### 6. 尝试其他处理模式
 
@@ -221,9 +222,7 @@ python compare.py
 
 程序会生成：
 
-```text
 images/comparison.png
-```
 
 这一步属于拓展内容，不影响基础实践题完成。
 
